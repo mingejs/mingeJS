@@ -34,7 +34,6 @@ requests are welcomed.
 My name is MingGe. I speak for myself. Please support MingGeJs, for it
 is a JS library by Chinese, and we are all Chinese.
 
-
 # minggeJS 1.7 released
 
 Thanks to all the contributors who have reported bugs on
