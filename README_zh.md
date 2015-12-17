@@ -1,5 +1,7 @@
 # minggeJS
 
+[中文](README_zh.md).
+
 It is great honor for me to show you my brand new C2C jQuery
 competitor following the tremendous success of shearphoto, my awesome
 image cropping plugin. Frankly speaking, I had never used jQuery in my
