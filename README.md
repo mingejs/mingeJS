@@ -1,6 +1,6 @@
 # minggeJS
 
-[中文](README.md).
+[中文](README_zh.md).
 
 It is great honor for me to show you my brand new C2C jQuery
 competitor following the tremendous success of shearphoto, my awesome
