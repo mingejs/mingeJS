@@ -1,96 +1,50 @@
 # minggeJS
 
-[中文](README_zh.md).
+English version is [here](README.md).
 
-It is great honor for me to show you my brand new C2C jQuery
-competitor following the tremendous success of shearphoto, my awesome
-image cropping plugin. Frankly speaking, I had never used jQuery in my
-work. I know jQuery from inside out, but I don't really like it. All
-my plugins are developed with Vanilla JS. For example, shearphoto, my
-recent work I mentioned earlier, if you look under the hood, you will
-find out that it's just Vanilla JS. Up to now, there still are quite
-many frontend developers suffering from jQuery, since not everyone has
-the ability to build a competitive jQuery replacement. So I have an
-idea, why not just write an awesome jQuery replacement with my own
-thoughts and my own architecture?
+继优秀作品shearphoto截图插件，本人又再推出国产山寨JQUERY，为什么我要开发一个山寨JQUERY？老实说我从来没用过JQUERY，正因为我反感JQUERY。
+为什么我反感，因为我完全有开发JQUERY的能力，JQUERY的底层我都了如指掌。
+我开发插件一直都是用原生JS，大家可以看下我前面的作品shearphoto就是用原生JS写的。  虽说我反感JQUERY，但是JQUERY却在前端界占有大量的用户份额，之后我有个想法，不如重新开发一个属于自己思想，自己架构的JQUERY。有了想法就要实现我山寨JQUERY之路
 
-My name is MingGe, which is also a fucking gangster's name in China. I
-named the new library MingGeJs. Thus, you will know me is the author
-as soon as you see the name, which will also remind you that, JS
-libraries developed by us Chinese could be excellent and outstanding.
+我给了他一个霸气的名字：MingGeJs，  
 
-It took me one week to develop MingGeJs, which is intended to be
-bug-for-bug compatible with jQuery, but outperforms jQuery at every
-single benchmark, and with support for IE 6/7/8 as jQuery before 2.0.
+MingGeJs是什么？它是我一个星期完成的作品，它是一个JS类库，它拥有和JQUERY相同的语法，相同函数，相同的函数用法， 但是动画，选择器性能，函数
+效率都在JQ之上，同时兼容IE 6 7 8，同时与JQUERY相兼容
 
-I do not have a formal CS degree. I have only high school diploma. My
-English is so poor that I cannot wrote even a single sentence. But, I
-believe, where there is a will, there is a way. I have set an
-ambitious goal for MingGeJs, that is, MingGeJs should take over more
-than a half of jQuery's market share world-wide. MingGeJs has been
-open sourced at Github. Feel free to open an issue, and all pull
-requests are welcomed.
+它的名字叫MingGeJs，MingGe就是我的大名， 一看到插件名字，就知道作者是我，知道它是国产的，让别人知道国产类库一样做得很出色，出众
 
-My name is MingGe. I speak for myself. Please support MingGeJs, for it
-is a JS library by Chinese, and we are all Chinese.
+本人文化程度不高，初中毕业！半句英文都不会，但是我相信只要肯努力一样可以实现自己的梦想。MingGeJS的梦想有点大胆，就是在全球范围内，占据
 
-# minggeJS 1.7 released
+JQUERY百分之50以上的用户份额。MingGeJs已在GIT开源，欢迎各路前端高手对MingGeJs类库进行评测！  
 
-Thanks to all the contributors who have reported bugs on
-Github. minggeJS 1.6 was released in a hurry, it has way too many
-bugs. Most of them are fixed this time. I also have added a few APIs,
-like JSONP, and attr(). Feel free to report bugs you have found, so I
-could fix them as soon as possible.
+我是mingge    请支持国产minggeJS类库，因为我们都是中国人。    
 
-In the previous release, I forgot to mention the advantages of
-minggeJS, and it was mostly criticized for reinventing the wheel. I
-will keep the promise that minggeJS will take over more than a half of
-jQuery's market share. I have also started working on an AngularJS
-replacement, which will be open sourced in the future. I really enjoy
-taking great challenges.
+#又迎来minggeJS1.7的更新
+感谢GIT贡献者提交的BUG，1.6BUG较多，因为当时写得比较急，目前已经大致修复！
+minggeJS新增了JSONP，attr()等许多还没及时写上的API,以及优化部份函数等
+欢迎大家也到我GIT贡献一下，让我能及时修复更新！
 
-minggeJS have several advantages over jQuery,
+上一次发的1.6版本，并没有介绍到minggeJS的优点，所以很多人只围绕着我山寨JQUERY装逼没前途咬着不放，
+我说过minggeJS的梦想要夺取JQ百分之50的份额，这话我能写得出，就不会收回，即管失败了我也没损失。 JQUERY又不会因为我要挑战他而大怒，失败就失败，又不是没试过！
+我还山寨angularjs，开发进度到了百之20左右，我到时候又要开源了。对手多强大我压根不屑，挑战就挑战！
 
-## 1. minggeJS's selector is faster
+下面我介绍一下minggeJS几大优点。
 
-benchmark result of selecting specific nodes from 100K div nodes.
+minggeJS具有以下优点
+1：选择器执行速度胜出JQUERY，
+   以十万个DIV节点测试，分别用minggeJS与JQUERY选择器取出指定节点测试：
+ JQUERY结果 ：     IE7以上：花时1800毫秒   IE7 花时   8135毫秒     IE6   花时超过30-40秒之间，浏览器随机卡死。
+ minggeJS结果：    IE7以上：花时1500毫秒   IE7花时    5132毫秒      IE6花时 23-35秒之间   浏览器也有卡死现象，但次数少。
+  花时越少，选择器性能越强，从结果来看，minggeJS大获全胜。    司徒正美也开发了一个号称世界最快的选择器，我也测试了下，从结果来看和我不分上下的！
+  还有一点值得提提，居闻JQUERY的选择器不是自己公司原创的，是用第三方选择器改出来的！minggeJS的选择器问心无愧地说全部是我原创开发的   
 
-|            |  IE 8+   |   IE 7   |   IE 6   |
-| ---------- | -------- | -------- | -------- |
-|  jQuery    |  1800ms  |  8135ms  |  30-40s  |
-|  minggeJS  |  1500ms  |  5132ms  |  23-35s  |
+2：众所周之，JQUERY的动画原理是采用定时器方原理，minggeJS原理不同，minggeJS的动画采用的是CSS3过渡原理，遗憾的是minggeJS的动画不支持IE678。
+   minggeJS并不是第一个采用CSS3过渡动画，zepto的动画也是采用这个原理，可惜zepto动画做得真心差，zepto是不支持串联式动画的，用zepto做复杂动画，简直是一大败笔。   minggeJS则支持动画串联，支持高效准确回调，支持接口查询是否正在动画等，可以告诉大家用minggeJS做手机动画，绝对是最佳的选择！      
 
-less is better.
 
-As you can see, minggeJS is faster than jQuery on all versions of
-Internet Explorer, and is comparable to a selector library by
-RubyLouvre, which he claims is fastest in the world. It is worth
-mentioning that, selector in minggeJS is developed on my own, while
-jQuery just piggyback on a third-party library.
+3：语法，函数用法，函数名称，都与JQUERY一致，只要会JQUERY，你就会更用minggeJS,易学易用，马上上手。部份函数用法稍有不同，例如mingge新建节点是用$(XX).createNode(),比JQUERY方便很多！
+  minggeJS不单单是山寨JQUERY，更多的是融入了自己的思想，想法！
 
-## 2. minggeJS has better animate()
+4：文件体积20K左右，后期升级可能会维持在40K左右，我自己的想法就是希望不超过40K。
 
-Unlike jQuery, minggeJS's animate() is implemented using CSS3
-animation. Unfortunately, IE 6/7/8 is not supported by this
-release. Unlike Zepto which also uses CSS3 animation, you can easily
-combine multiple animations with minggeJS. As far as I can tell,
-minggeJS is the best choice to develop your next animation on mobile
-phones.
-
-## 3. minggeJS's API is just the same as jQuery
-
-Anyone who knows jQuery will feel at home. However, minggeJS is much
-more than simply a jQuery replacement, I have extended it with my very
-own thoughts.
-
-## 4. minggeJS is smaller in size.
-
-The size of minggeJS is just 20 kB, while the size of jQuery is over
-250kB. I will try my best to keep it under 40 kB in the long run.
-
-## 5. minggeJS is mobile first
-
-In the near future, minggeJS will first surpass zepto on mobile. And
-then, minggeJS will introduce second implementation of animate(),
-which uses timer, along with current one which uses CSS3
-animation. You may choose one that better fits your needs.
+5： minggeJS后期的发展，更多是想往手机端发展，即管战不胜JQUERY，能战胜zepto也是赏心悦目的事。再者就是动画方面，打算采用两种模式供用户选择，1种是CSS3，另一种CSS2定时器方式，定时器方式，估计以插件方式发布！
