@@ -85,6 +85,7 @@ minggeJS新增了JSONP，attr()等许多还没及时写上的API,以及优化部
 下面我介绍一下minggeJS几大优点。
 
 minggeJS具有以下优点
+
 1：选择器执行速度胜出jQuery，
    以十万个DIV节点测试，分别用minggeJS与jQuery选择器取出指定节点测试：
  jQuery结果 ：     IE7以上：花时1800毫秒   IE7 花时   8135毫秒     IE6   花时超过30-40秒之间，浏览器随机卡死。
